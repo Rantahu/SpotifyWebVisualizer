@@ -8,9 +8,10 @@ chrome.extension.sendMessage({}, function(response) {
 			visDisplay.id = "visDisplay";
 			visDisplay.className = "hidden";
 
-			var hideDisplay = document.createElement("H2");
-			hideDisplay.innerHTML = "X";
+			var hideDisplay = document.createElement("BUTTON");
+			hideDisplay.className = "control-button control-button--circled"
 			hideDisplay.id = "hideDisplay";
+			hideDisplay.innerHTML = "X";
 
 			hideDisplay.addEventListener("click", function(){
 				visDisplay.classList.add("hidden");
