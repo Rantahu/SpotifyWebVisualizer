@@ -1,10 +1,30 @@
 #visDisplay{
-	background-color: black;
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	z-index: 201;
 	text-align: center;
+}
+
+#visBackground{
+	-webkit-filter: blur(50px) brightness(70%); 
+	-moz-filter: blur(50px) brightness(70%);
+	-o-filter: blur(50px) brightness(70%);
+	-ms-filter: blur(50px) brightness(70%);
+	filter: blur(50px) brightness(70%); 
+
+	transform: scale(1.5);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 201;
+	text-align: center;
+
 }
 
 #hideDisplay{

@@ -10,6 +10,12 @@ chrome.extension.sendMessage({}, function(response) {
 });
 
 function renderNewElements() {
+
+	// make visualizer screen
+	var visBackground = document.createElement("DIV");
+	visBackground.id = "visBackground";
+	visBackground.className = "hidden";
+
 	// make visualizer screen
 	var visDisplay = document.createElement("DIV");
 	visDisplay.id = "visDisplay";
@@ -22,6 +28,8 @@ function renderNewElements() {
 
 	hideDisplay.addEventListener("click", function(){
 		visDisplay.classList.add("hidden");
+		visBackground.classList.add("hidden");
+
 	});
 
 	var artworkElem = document.createElement("IMG");
@@ -69,8 +77,11 @@ function renderNewElements() {
 
 	revealBtn.addEventListener("click", function(){
 		visDisplay.classList.remove("hidden");
+		visBackground.classList.remove("hidden");
+
 	});
 
+	$('body').append(visBackground);	
 	$('body').append(visDisplay);	
 	$('body').append(revealBtn);	
 }
@@ -96,9 +107,13 @@ function startListening(){
 			CURRENT_PLAYING['title'] = $('div.track-info__name').text();
 			CURRENT_PLAYING['artist'] = $('div.track-info__artists').text();
 
-			$('#artwork-elem').attr("src", CURRENT_PLAYING['artwork']);
-			$('#title-elem').text(CURRENT_PLAYING['title']);
-			$('#artist-elem').text(CURRENT_PLAYING['artist']); 
+			// make sure new image is loaded
+			if (CURRENT_PLAYING['artwork']) {
+				$('#visBackground').css("background-image", 'url("'+CURRENT_PLAYING['artwork']+'")');
+				$('#artwork-elem').attr("src", CURRENT_PLAYING['artwork']);
+				$('#title-elem').text(CURRENT_PLAYING['title']);
+				$('#artist-elem').text(CURRENT_PLAYING['artist']); 
+			}
 
 		});
 	});
