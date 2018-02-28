@@ -21,17 +21,6 @@ function renderNewElements() {
 	visDisplay.id = "visDisplay";
 	visDisplay.className = "hidden";
 
-	var hideDisplay = document.createElement("BUTTON");
-	hideDisplay.className = "control-button control-button--circled"
-	hideDisplay.id = "hideDisplay";
-	hideDisplay.innerHTML = "X";
-
-	hideDisplay.addEventListener("click", function(){
-		visDisplay.classList.add("hidden");
-		visBackground.classList.add("hidden");
-
-	});
-
 	var artworkElem = document.createElement("IMG");
 	artworkElem.id = "artwork-elem"
 
@@ -59,11 +48,14 @@ function renderNewElements() {
 	    	else if (key==37) {
 	    		$('.spoticon-skip-back-16').trigger("click")
 	    	}
+
+	    	else if (key==27) {
+				visDisplay.classList.add("hidden");
+				visBackground.classList.add("hidden");
+	    	}
 	    }
 	}
 
-
-	visDisplay.appendChild(hideDisplay);
 	visDisplay.appendChild(spotifyLogo);
 	visDisplay.appendChild(artworkElem);
 	visDisplay.appendChild(titleElem);
