@@ -28,13 +28,19 @@
 
 }
 
-#hideDisplay{
+#instruction-div{
 	position: absolute;
 	top: 20px;
 	right: 20px;
-	/*color: white;*/
-}
+	color: white;
+	border: 1px solid white;
+	text-align: center;
 
+    width: 20%;
+    height: 20%;
+    opacity: 0.8;
+    border-radius: 5%;
+}
 
 .hidden{
 	display: none;
