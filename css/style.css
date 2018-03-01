@@ -28,16 +28,31 @@
 
 }
 
-#hideDisplay{
+#instruction-div{
 	position: absolute;
 	top: 20px;
 	right: 20px;
-	/*color: white;*/
-}
+	color: white;
+	border: 1px solid white;
+	text-align: center;
 
+    width: 20%;
+    opacity: 0.8;
+    border-radius: 5%;
+
+    font-size: 1.2em;
+
+    -webkit-transition: opacity 1s; /* Safari */
+    transition: opacity 1s;
+
+}
 
 .hidden{
 	display: none;
+}
+
+.fade-out{
+	opacity: 0 !important;
 }
 
 .absolute-pos{
