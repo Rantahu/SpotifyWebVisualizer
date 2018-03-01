@@ -37,9 +37,10 @@
 	text-align: center;
 
     width: 20%;
-    height: 20%;
     opacity: 0.8;
     border-radius: 5%;
+
+    font-size: 1.2em;
 }
 
 .hidden{

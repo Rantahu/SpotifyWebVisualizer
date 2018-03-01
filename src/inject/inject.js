@@ -39,7 +39,7 @@ function renderNewElements() {
 
 	var instructionDiv = document.createElement("DIV");
 	instructionDiv.id = "instruction-div";
-	instructionDiv.innerHTML = "Left Arrow: > <br> Right Arrow: < <br> Space: |> <br> Esc: Exit <br>";
+	instructionDiv.innerHTML = "<br>Left Arrow: <button class='control-button spoticon-skip-back-16'></button> <br> Right Arrow: <button class='control-button spoticon-skip-forward-16'></button> <br> Space: <button class='control-button spoticon-play-16'></button> <br> Esc: <button class='control-button spoticon-exit-16'>Exit</button> <br><br>";
 
 	// visualizer controls
 	document.onkeydown = function(e){
@@ -60,7 +60,6 @@ function renderNewElements() {
 	    }
 	}
 
-	visDisplay.appendChild(instructionDiv);
 	visDisplay.appendChild(spotifyLogo);
 	visDisplay.appendChild(artworkElem);
 	visDisplay.appendChild(titleElem);
@@ -73,14 +72,22 @@ function renderNewElements() {
 	revealBtn.innerHTML = "Visualize";
 
 	revealBtn.addEventListener("click", function(){
+
+		visDisplay.appendChild(instructionDiv);
 		visDisplay.classList.remove("hidden");
 		visBackground.classList.remove("hidden");
+
+		// remove instructions
+		setTimeout(function(){
+			instructionDiv.classList.add("hidden");
+		}, 2000);
 
 	});
 
 	$('body').append(visBackground);	
 	$('body').append(visDisplay);	
 	$('body').append(revealBtn);	
+
 }
 
 function startListening(){
