@@ -79,7 +79,7 @@ function renderNewElements() {
 
 		// remove instructions
 		setTimeout(function(){
-			instructionDiv.classList.add("hidden");
+			instructionDiv.classList.add("fade-out");
 		}, 2000);
 
 	});

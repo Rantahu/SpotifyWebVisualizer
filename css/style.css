@@ -41,10 +41,18 @@
     border-radius: 5%;
 
     font-size: 1.2em;
+
+    -webkit-transition: opacity 1s; /* Safari */
+    transition: opacity 1s;
+
 }
 
 .hidden{
 	display: none;
+}
+
+.fade-out{
+	opacity: 0 !important;
 }
 
 .absolute-pos{
