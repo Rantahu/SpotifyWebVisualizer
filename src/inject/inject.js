@@ -73,6 +73,8 @@ function renderNewElements() {
 
 	revealBtn.addEventListener("click", function(){
 
+		instructionDiv.classList.remove("fade-out");
+
 		visDisplay.appendChild(instructionDiv);
 		visDisplay.classList.remove("hidden");
 		visBackground.classList.remove("hidden");
