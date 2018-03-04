@@ -54,6 +54,7 @@ function renderNewElements() {
 	    	else if (key==27) {
 				visDisplay.classList.add("hidden");
 				visBackground.classList.add("hidden");
+                revealBtn.classList.remove("hidden");
 	    	}
 	    }
 	}
@@ -72,6 +73,7 @@ function renderNewElements() {
 	revealBtn.addEventListener("click", function(){
 		visDisplay.classList.remove("hidden");
 		visBackground.classList.remove("hidden");
+        revealBtn.classList.add("hidden");
 
 	});
 
