@@ -52,10 +52,22 @@ h1, h2 {
 
 
 #revealButton{
-	top: 10%;
-	right: 20px;
+    z-index: 1000;
+	bottom: 30px;
+	right: 212px;
 	position: fixed;
+    width:10px;
+    background-color: transparent;
+    border:none;
 }
+svg:hover #visualizeButtonSVG{
+     stroke:#4687d6!important;
+}
+svg:hover #visualizeButtonSVGPupil { 
+    fill:#4687d6!important;
+}
+     
+
 
 #artwork-elem{
 	margin-top: 15%;

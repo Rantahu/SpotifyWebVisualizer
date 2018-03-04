@@ -9,6 +9,8 @@ chrome.extension.sendMessage({}, function(response) {
 	}, 10);
 });
 
+
+
 function renderNewElements() {
 
 	// make visualizer screen
@@ -64,8 +66,8 @@ function renderNewElements() {
 	// make toggle
 	var revealBtn = document.createElement("BUTTON");
 	revealBtn.id = "revealButton";
-	revealBtn.className = "btn btn-blue"
-	revealBtn.innerHTML = "Visualize";
+	//revealBtn.className = "btn btn-blue"
+	revealBtn.innerHTML = '<svg viewBox="-293 385 24 24" width="19"><title>Spotify</title><path path id="visualizeButtonSVG" fill="none" stroke="#949293" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M-292,397c0,0,4-8,11-8 s11,8,11,8s-4,8-11,8S-292,397-292,397z"></path><circle  id="visualizeButtonSVGPupil" fill="#949293" cx="-281" cy="397" r="3"/></svg>'
 
 	revealBtn.addEventListener("click", function(){
 		visDisplay.classList.remove("hidden");
