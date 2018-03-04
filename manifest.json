@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "Visualizer for Spotify Web Player",
-  "homepage_url": "http://www.nikodraca.com",
+  "homepage_url": "http://www.thndr.io/",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
